@@ -12,9 +12,9 @@ My goal isn't just to collect flags—it's to build practical skills in digital 
 
 ### 🔍 Digital Forensics
 
-| Challenge         | Platform   | Difficulty | Status      |
-| ----------------- | ---------- | ---------- | ----------- |
-| Scattered Secrets | PKCERT CTF | Hard       | ✅ Completed |
+| Challenge         | Platform   | Difficulty | Status      | Links/Source |
+| ----------------- | ---------- | ---------- | ----------- |---------------------------|
+| Scattered Secrets | PKCERT CTF | Hard       | ✅ Completed | https://ctf.pkcert.gov.pk/# |
 
 ---
 
