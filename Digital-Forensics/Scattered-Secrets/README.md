@@ -64,6 +64,8 @@ Click **Browse** and upload the provided file.
 After uploading the file and reviewing the available metadata fields, I discovered a value stored in the **User Comment** field.
 
 
+<img width="1300" height="422" alt="user-comment" src="https://github.com/user-attachments/assets/f1f2007c-8e0e-430c-ac75-5c306ec60152" />
+
 
 
 This revealed the first fragment of the flag:
@@ -90,7 +92,8 @@ https://stegzero.com/
 
 I selected the decode option and pasted the contents of the file.
 
-!lio.jpg
+<img width="1064" height="621" alt="lio" src="https://github.com/user-attachments/assets/57ca9a29-912e-4ff3-94d6-3c15b97cce66" />
+
 
 The tool successfully detected hidden zero-width characters and revealed the second fragment:
 
@@ -138,8 +141,7 @@ I created a small table and tested multiple binary mappings. Every attempt produ
 
 This was an important lesson: when a decoding attempt produces garbage repeatedly, stop brute-forcing and return to analyzing the source data.
 
-<img width="1647" height="520" alt="image" src="https://github.com/user-attachments/assets/45bdc24c-e1ca-48c7-bc1f-346cad35de8c" />
-
+<img width="1057" height="142" alt="failed-attempts" src="https://github.com/user-attachments/assets/93b7020b-43ae-49e5-a563-26deb66554c2" />
 
 After taking a closer look at the log entries, I noticed a repeating request:
 
@@ -164,14 +166,10 @@ The following workflow was performed in CyberChef:
     - 200 → 0
     - 404 → 1
 6. Decoded the resulting binary stream using From Binary.
-
-!image.png
-
+<img width="925" height="872" alt="cyberchef-import-accesslog-file" src="https://github.com/user-attachments/assets/6530c80e-526e-4b2a-9b47-a4f7632c5f39" />
 Add recipe : Filter 
-
 Add Regix(keeps only)  :   /api/v1/heartbeat  
-
-!image.png
+<img width="1936" height="782" alt="cyberchef-Filter" src="https://github.com/user-attachments/assets/a2634621-739d-4977-8ac8-686aceae86c8" />
 
 After filtering the heartbeat entries, I copied the output back into the CyberChef input panel and cleared the previous recipe.
 
@@ -181,18 +179,17 @@ This produced a clean list containing only:
 
 - 200
 - 404
-
-!image.png
+<img width="1912" height="802" alt="cyberchef-Extract" src="https://github.com/user-attachments/assets/195e0987-f8e1-4289-926d-251ef619c004" />
 
 Paste the output again in input field and add recipie Find and replace
 replace 200-0
 404-1
 
-!image.png
+<img width="1082" height="857" alt="cyberchef-Find Replace" src="https://github.com/user-attachments/assets/56655223-1a73-4c79-90aa-49cbfc9ba25e" />
 
 The output was now a binary stream, which I decoded using the **From Binary** recipe.
 
-!image.png
+<img width="875" height="535" alt="cyberchef-frombinary" src="https://github.com/user-attachments/assets/bac35ced-43a6-4070-a3a7-c54f01fb02e9" />
 
 The process was:
 
