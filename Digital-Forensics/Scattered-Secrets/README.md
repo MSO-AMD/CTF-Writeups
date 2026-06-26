@@ -1,3 +1,4 @@
+
 # Scattered Secrets – Digital Forensics CTF Write-up
 
 Category: Digital Forensics
@@ -57,11 +58,13 @@ https://exif.tools/
 
 Click **Browse** and upload the provided file.
 
-!image.png
+<img width="1647" height="520" alt="image" src="https://github.com/user-attachments/assets/9e3a8d35-4536-44ea-b189-10c1cbc88aab" />
+
 
 After uploading the file and reviewing the available metadata fields, I discovered a value stored in the **User Comment** field.
 
-!image.png
+<img width="1647" height="520" alt="image" src="https://github.com/user-attachments/assets/60d01be6-3d3a-468c-a65e-69f6de56672d" />
+
 
 This revealed the first fragment of the flag:
 
@@ -135,7 +138,8 @@ I created a small table and tested multiple binary mappings. Every attempt produ
 
 This was an important lesson: when a decoding attempt produces garbage repeatedly, stop brute-forcing and return to analyzing the source data.
 
-!image.png
+<img width="1647" height="520" alt="image" src="https://github.com/user-attachments/assets/45bdc24c-e1ca-48c7-bc1f-346cad35de8c" />
+
 
 After taking a closer look at the log entries, I noticed a repeating request:
 
