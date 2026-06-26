@@ -63,7 +63,7 @@ Click **Browse** and upload the provided file.
 
 After uploading the file and reviewing the available metadata fields, I discovered a value stored in the **User Comment** field.
 
-<img width="1647" height="520" alt="image" src="https://github.com/user-attachments/assets/60d01be6-3d3a-468c-a65e-69f6de56672d" />
+
 
 
 This revealed the first fragment of the flag:
